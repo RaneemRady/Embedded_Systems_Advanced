@@ -2,25 +2,33 @@
 
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
- *         File:  IntCrtl.h
- *       Module:  IntCrtl
+ *         File:  Compiler.h
+ *       Module:  -
  *
- *  Description:  header file for IntCrtl Module    
+ *  Description:  Contains Compiler Dependent MACRO Definition     
  *  
  *********************************************************************************************************************/
-#ifndef IntCrtl_H
-#define IntCrtl_H
+#ifndef COMPILER_H
+#define COMPILER_H
 
 /**********************************************************************************************************************
  * INCLUDES
  *********************************************************************************************************************/
-#include "Std_Types.h"
-#include "IntCrtl_Cfg.h"
+
 
 /**********************************************************************************************************************
  *  GLOBAL CONSTANT MACROS
  *********************************************************************************************************************/
+/* NULL_PTR define with a void pointer to zero definition*/
+#define NULL_PTR       ((void *)0)
 
+/* INLINE  define for abstraction of the keyword inline*/
+#define INLINE         inline
+
+/* LOCAL_INLINE define for abstraction of the keyword inline in functions with "static" scope.
+   Different compilers may require a different sequence of the keywords "static" and "inline" 
+   if this is supported at all. */
+#define LOCAL_INLINE   static inline
 
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION MACROS
@@ -40,22 +48,10 @@
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION PROTOTYPES
  *********************************************************************************************************************/
+
  
-/******************************************************************************
-* \Syntax          : void IntCrtl_Init(void)                                      
-* \Description     : initialize Nvic\SCB Module by parsing the Configuration 
-*                    into Nvic\SCB registers                                    
-*                                                                             
-* \Sync\Async      : Synchronous                                               
-* \Reentrancy      : Non Reentrant                                             
-* \Parameters (in) : None                     
-* \Parameters (out): None                                                      
-* \Return value:   : None
-*******************************************************************************/
-void IntCrtl_Init(void);
- 
-#endif  /* IntCrtl_H */
+#endif  /* COMPILER_H */
 
 /**********************************************************************************************************************
- *  END OF FILE: IntCrtl.h
+ *  END OF FILE: Std_Types.h
  *********************************************************************************************************************/
