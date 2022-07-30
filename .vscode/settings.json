@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "port.h": "c",
+        "dio.h": "c",
+        "registers.h": "c",
+        "platform_types.h": "c",
+        "compiler.h": "c",
+        "timer.h": "c",
+        "intctrl.h": "c"
+    }
+}

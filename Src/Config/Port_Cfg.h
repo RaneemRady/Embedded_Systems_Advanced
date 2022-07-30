@@ -1,0 +1,1 @@
+#define PORT_ACTIVATED_CHANNELS_SIZE               3

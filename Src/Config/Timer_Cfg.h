@@ -1,0 +1,1 @@
+#define GPT_ACTIVATED_CHANNELS_SIZE						1
